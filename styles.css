@@ -1,0 +1,39 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: black;
+    width:100vw;
+    height:100vh;
+}
+
+#title{
+    background-color:midnightblue;
+    color: lightskyblue;
+    font-size: 48px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+.game{
+    background-color: slateblue;
+    width:100%;
+    height: 60%;
+}
+
+.play{
+    background-color: darkslateblue;
+    color: turquoise;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    width:100%;
+    height:20%;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

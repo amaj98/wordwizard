@@ -5,24 +5,33 @@
   <head>
 
     <title>Word Wizard</title>
-
     <link rel="stylesheet" href="styles.css" type="text/css">
-
     <script
-
         src="http://code.jquery.com/jquery-3.4.1.min.js"
-
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-
         crossorigin="anonymous">
-
     </script>
-
     <script type='text/javascript' src="wordwizard.js"></script>
+
   </head>
 
   <body>
-    <div class = "title">Word Wizard</div>
+    <div id= "title">Word Wizard</div>
+    <div class = "game" id= "game">
+        <div id = "guesses"></div>
+        <div id = "letterbank"></div>
+    </div>
+    <div class = "play" id = "play">
+    </div>
+
+    
+    <script type="text/javascript">
+
+        $(function(){
+        startGame(); 
+        });
+
+    </script>
   </body>
 
 </html>
