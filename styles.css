@@ -43,11 +43,10 @@ body{
     border: 3px dotted darkblue;
 }
 #letters{
-    color: black;
+    color: darkslategrey;
     font-size: 50px;
     font-weight: bolder;
     height: 70%;
-
 }
 
 .play{
