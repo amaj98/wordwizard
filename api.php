@@ -14,7 +14,7 @@
         $statement = $dbhandle->prepare($query);
         $statement->execute();
     
-        $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $results = $statement->fetch(PDO::FETCH_ASSOC);
         echo json_encode($results);
     }
 
