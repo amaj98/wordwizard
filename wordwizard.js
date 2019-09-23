@@ -2,7 +2,7 @@ var ready = () =>{
     $('body').empty();
     $('body').text('abc');
     $('body').on('click',()=>{
-        $.ajax({method: "GET",url:"api.php",success: (data)=>$('body').text(data)})
+        $.ajax({method: "GET",url:"api.php",success: (data)=>$('body').text(data[0].rack)})
     });
     /*
     $('#game').text("Press Enter to start")
