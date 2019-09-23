@@ -33,7 +33,8 @@
         //echo json_encode($combos);
         
         $a = json_decode($_POST["words"]);
-        echo($a[1]);
+        $a[1] = "zzz";
+        echo(json_encode($a));
     }
 
 ?>
