@@ -54,9 +54,16 @@
 
     //header('Content-Type: application/json');
 
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $test = json_decode($_POST);
+        echo json_encode($_POST);
+    }
 
+    
+    elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        echo json_encode($results);
+    }
 
-    echo json_encode($_POST);
 
 
 

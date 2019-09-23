@@ -1,8 +1,8 @@
 var ready = () =>{
     $('body').empty();
     $('body').text('abc');
-    $('body').on('click',()=>{$.post("api.php",{'words':'abc,123,456'},(data)=>$('body').text(JSON.parse(data)['words']))});
-    
+    $('body').on('click',()=>{$.post("api.php",{"words":"abc,123,456"},(data)=>$('body').text(JSON.parse(data)['words']))});
+    $('body').on('keydown',()=>{$.get((data)=>$('body').text(JSON.stringify(data)))});
     /*
     $('#game').text("Press Enter to start")
 
