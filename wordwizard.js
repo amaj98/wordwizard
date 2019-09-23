@@ -20,7 +20,7 @@ var letters = ""
 var startGame = ()=>{
     $('#game').append("<div id = 'guesses'></div>");
     $('#game').append("<div id = 'letterbank'>LETTERS</div>");
-    $.get("api.php",(data)=>letters = JSON.parse(data)["rack"]);
+    $.get("api.php",(data)=>letters = JSON.stringify(data));
     $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + letters + "</div>");
     $(document).keydown(inputHandler);
 }
