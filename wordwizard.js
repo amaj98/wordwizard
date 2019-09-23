@@ -20,11 +20,10 @@ var ready = () =>{
 
 var startGame = ()=>{
     $('#game').append("<div id = 'guesses'></div>");
-    $('#game').append("<div id = 'letterbank'>LETTERS</div>");
+    $('#game').append("<div id = 'letterbank'>letter bank</div>");
     jQuery.ajaxSetup({async:false});
     let letters = ""
     $.get("api.php",(data)=>letters = data["rack"]);
-    console.log(letters);
     $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + [...letters].join(' ') + "</div>");
     $(document).keydown(inputHandler);
 }
