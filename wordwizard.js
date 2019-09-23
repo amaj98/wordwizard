@@ -1,7 +1,7 @@
 var ready = () =>{
     $('body').empty();
     $('body').text('start');
-    $('body').on('click',()=>{$.post("api.php",'[{"words":"abc,123,456"}]',(data)=>$('body').text(data))});
+    $('body').on('click',()=>{$.post("api.php",{name:'Aarif'},(data)=>$('body').text(data))});
     $('body').on('keydown',()=>{$.get("api.php",(data)=>$('body').text(JSON.stringify(data)))});
     
     
