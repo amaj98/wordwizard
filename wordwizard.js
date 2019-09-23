@@ -21,7 +21,7 @@ var ready = () =>{
 var startGame = ()=>{
     $('#game').append("<div id = 'guesses'></div>");
     $('#game').append("<div id = 'letterbank'>letter bank</div>");;    
-    $.get("api.php",(data)=> console.log(data));//processRack(data["rack"]));
+    $.get("api.php",(data)=> processRack(data));
 }
 
 var processRack = (rack) => {
