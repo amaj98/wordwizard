@@ -5,6 +5,7 @@
   <head>
 
     <title>Word Wizard</title>
+    <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="styles.css" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script type='text/javascript' src="wordwizard.js"></script>
@@ -12,12 +13,10 @@
   </head>
 
   <body>
-    <div id= "title">Word Wizard</div>
-    <div class = "game" id= "game">
-        <div id = "guesses"></div>
-        <div id = "letterbank"></div>
+    <div class = "title text-center" id= "title">Word Wizard</div>
+    <div class = "game text-center" id= "game">
     </div>
-    <div class = "play" id = "play">
+    <div class = "play text-center" id = "play">
         
     </div>
 
@@ -25,7 +24,7 @@
     <script type="text/javascript">
 
         $(function(){
-        startGame(); 
+        ready(); 
         });
 
     </script>

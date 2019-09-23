@@ -1,10 +1,17 @@
 var ready = () =>{
-    $('#game').text("Press any key to start")
-    $(document).keydown(()=>{
-        $('#game').text("")
-        startGame()});
+
+    $('#game').text("Press Enter to start")
+
+    $(document).keydown((evt)=>{
+        if(evt.key == 'Enter'){
+            $('#game').text("");
+            $(document).off('keydown')
+            startGame();}
+        });
 }
 var startGame = ()=>{
+    $('#game').append("<div id = 'guesses'></div>")
+    $('#game').append("<div id = 'letterbank'>LETTERS</div>")
     $(document).keydown(inputHandler);
 }
 
