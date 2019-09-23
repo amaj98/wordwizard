@@ -31,8 +31,8 @@
             $words = array_merge($words,explode("@@",$raw));
         }*/
         //echo json_encode($combos);
-        $test = json_decode($_POST['words'])
-        echo $test["0"];
+        
+        echo $_POST['words'];
     }
 
 ?>
