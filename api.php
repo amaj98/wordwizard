@@ -30,8 +30,14 @@
             $raw = $statement->fetch(PDO::FETCH_ASSOC);
             $words = array_merge($words,explode("@@",$raw));
         }*/
-        echo("asdasdasd");
         //echo json_encode($combos);
+
+        $query = "SELECT rack FROM racks WHERE length=7 and weight <= 10 order by random() limit 1";
+        $statement = $dbhandle->prepare($query);
+        $statement->execute();
+    
+        $results = $statement->fetch(PDO::FETCH_ASSOC);
+        echo json_encode($results);
     }
 
 ?>
