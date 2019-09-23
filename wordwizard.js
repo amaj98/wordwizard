@@ -2,7 +2,7 @@ var ready = () =>{
     $('body').empty();
     $('body').text('start');
     let test = ["Aarif","Sleep"]
-    $('body').on('click',()=>{$.post("api.php",{"words":JSON.stringify(["w1","w2",'w3'])},(data)=>{$('body').text(JSON.parse(data)[1]);console.log(JSON.parse(data)[1])})});
+    $('body').on('click',()=>{$.post("api.php",{"words":JSON.stringify(["w1","w2",'w3'])},(data)=>{$('body').text(data);console.log(data)})});
     $('body').on('keydown',()=>{$.get("api.php",(data)=>$('body').text(JSON.stringify(data)))});
     
     
