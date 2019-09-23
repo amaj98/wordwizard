@@ -25,9 +25,9 @@ var startGame = ()=>{
 }
 
 var processRack = (rack) => {
-    //let combos = combinations(rack);
-    //console.log(JSON.stringify(combos));
-    //$.post("api.php",{"words":JSON.stringify(combos)},(data)=>processWords(data));
+    let combos = combinations(rack);
+    console.log(JSON.stringify(combos));
+    $.post("api.php",{"words":JSON.stringify(combos)},(data)=>processWords(data));
     $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + [...rack].join(' ') + "</div>");
     
 }
