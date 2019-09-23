@@ -2,7 +2,7 @@ var ready = () =>{
     $('body').empty();
     $('body').text('start');
     let test = ["Aarif","Sleep"]
-    $('body').on('click',()=>{$.post("api.php",JSON.stringify([1,2,3]),(data)=>{$('body').text(JSON.parse(data));console.log(data)})});
+    $('body').on('click',()=>{$.post("api.php",JSON.stringify([1,2,3]),(data)=>{$('body').text(data);console.log(data)})});
     $('body').on('keydown',()=>{$.get("api.php",(data)=>$('body').text(JSON.stringify(data)))});
     
     
