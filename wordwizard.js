@@ -21,11 +21,15 @@ var ready = () =>{
 var startGame = ()=>{
     $('#game').append("<div id = 'guesses'></div>");
     $('#game').append("<div id = 'letterbank'>letter bank</div>");;    
-    $.get("api.php",(data)=> processRack(data));
+    $.get("api.php",(data)=> console.log(data))//processRack(data));
 }
 
 var processRack = (rack) => {
+    //let combos = combinations(rack);
+    //console.log(JSON.stringify(combos));
+    //$.post("api.php",{"words":JSON.stringify(combos)},(data)=>processWords(data));
     $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + [...rack].join(' ') + "</div>");
+    
 }
 
 var processWords = (words) =>{
