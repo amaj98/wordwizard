@@ -18,14 +18,7 @@
   <body>
     <div id= "title">Word Wizard</div>
     <div class = "game" id= "game">
-        
-        <h1>Spot The Bingo</h1>
-
         <button id="grabmore">Fetch 10 Bingos</button>
-
-        <ul id="bingos">
-
-        </ul>
         <div id = "guesses"></div>
         <div id = "letterbank"></div>
     </div>
@@ -34,50 +27,13 @@
     </div>
 
     
+    <script type="text/javascript">
 
-  <script>
-
-    $(document).ready(function(){
-
-      
-
-      let showRacks = function(racks){
-
-        $("#bingos").html('');
-
-        racks.map(rack=>{
-
-          $("#bingos").append(`<li>${rack.rack}: <span class="answer hidden">${rack.words}</span></li>`);
-
+        $(function(){
+        startGame(); 
         });
 
-        $("#bingos li").on("click", function(evt){
-
-          $(evt.currentTarget).find(".answer").toggleClass("hidden");
-
-        });
-
-      }
-
-      
-
-      $("#grabmore").on("click", function(){
-
-        $.ajax({
-
-            method: "GET",
-
-            url: "api.php",
-
-            success: data=>{ showRacks(data)}
-
-        });
-
-      });
-
-    });
-
-  </script>
+    </script>
   </body>
 
 </html>
