@@ -21,7 +21,7 @@ var letters = "";
 var startGame = ()=>{
     $('#game').append("<div id = 'guesses'></div>");
     $('#game').append("<div id = 'letterbank'>LETTERS</div>");
-    $.get("api.php",(data)=>letters =data["rack"]);
+    $.get("api.php",(data)=>console.log(data["rack"]));
     console.log([...letters].join(' '));
     $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + [...letters].join(' ') + "</div>");
     $(document).keydown(inputHandler);
