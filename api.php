@@ -30,7 +30,7 @@
             $words = array_merge($words,explode("@@",$raw));
         }
         
-        echo json_encode($combos);
+        echo json_encode($words);
     }
 
 ?>
