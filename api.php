@@ -16,7 +16,7 @@
         $results = $statement->fetch(PDO::FETCH_ASSOC);
         echo json_encode($results);
     }
-
+    /*
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $combos = json_decode($_POST["words"]);
         
@@ -31,6 +31,6 @@
         }
 
         echo json_encode($words);
-    }
+    }*/
 
 ?>
