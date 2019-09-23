@@ -1,3 +1,9 @@
+var ready = () =>{
+    $('#game').text("Press any key to start")
+    $(document).keydown(()=>{
+        $('#game').text("")
+        startGame()});
+}
 var startGame = ()=>{
     $(document).keydown(inputHandler);
 }
