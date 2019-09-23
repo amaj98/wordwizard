@@ -11,6 +11,4 @@ $statement = $dbhandle->prepare($query);
 $statement->execute();
 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-echo $_POST;
-
 ?>
