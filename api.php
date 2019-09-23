@@ -16,12 +16,12 @@
         $results = $statement->fetch(PDO::FETCH_ASSOC);
         echo json_encode($results);
     }
-    /*
+    
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $combos = json_decode($_POST["words"]);
         
         $words = array();
-        
+        /*
         foreach ($combos as $value) {
             $query = "SELECT words FROM racks WHERE rack = '$value'"
             $statement = $dbhandle->prepare($query);
@@ -29,8 +29,8 @@
             $raw = $statement->fetch(PDO::FETCH_ASSOC);
             $words = array_merge($words,explode("@@",$raw));
         }
-
-        echo json_encode($words);
-    }*/
+        */
+        echo json_encode($combos);
+    }
 
 ?>
