@@ -24,7 +24,18 @@
     <script type="text/javascript">
 
         $(function(){
-          ready(); 
+          //ready();
+          $('#title').on('click',function(){
+            $.ajax({
+              
+            method: "GET",
+
+            url: "api.php",
+
+            success: data=>{ showRacks(data)}
+
+            });
+          }); 
         });
 
     </script>
