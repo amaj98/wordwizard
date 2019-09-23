@@ -33,7 +33,7 @@
         //echo json_encode($combos);
         
         $a =  json_decode($_POST);
-        $a[0] = 5;
+        #$a[0] = 5;
         echo(json_encode($a));
     }
 
