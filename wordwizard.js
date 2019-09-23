@@ -1,12 +1,12 @@
 var ready = () =>{
+    /*
     $('body').empty();
     $('body').text('start');
-    let test = ["Aarif","Sleep"]
     $('body').on('click',()=>{$.post("api.php",{"words":JSON.stringify(["w1","w2",'w3'])},(data)=>{$('body').text(data[1]);console.log(data)})});
     $('body').on('keydown',()=>{$.get("api.php",(data)=>$('body').text(JSON.stringify(data)))});
+    */
     
-    
-   /*
+   
     $('#game').text("Press Enter to start")
 
     $(document).keydown((evt)=>{
@@ -14,7 +14,7 @@ var ready = () =>{
             $('#game').text("");
             $(document).off('keydown')
             startGame();}
-        });*/
+        });
 }
 
 
@@ -27,7 +27,7 @@ var startGame = ()=>{
 var processRack = (rack) => {
     let combos = combinations(rack);
     console.log(JSON.stringify(combos));
-    $.post("api.php",JSON.stringify(combos),(data)=>processWords(data));
+    $.post("api.php",{"words":JSON.stringify(combos)},(data)=>processWords(data));
     $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + [...rack].join(' ') + "</div>");
     
 }

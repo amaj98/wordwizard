@@ -19,22 +19,19 @@
     }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        //$combos = json_decode($_POST);
+        $combos = json_decode($_POST["words"]);
         
-        //$words = array();
-        /*
-        foreach ($combos as $key => $value) {
+        $words = array();
+        
+        foreach ($combos as $value) {
             $query = "SELECT words FROM racks WHERE rack = '$value'"
             $statement = $dbhandle->prepare($query);
             $statement->execute();
             $raw = $statement->fetch(PDO::FETCH_ASSOC);
             $words = array_merge($words,explode("@@",$raw));
-        }*/
-        //echo json_encode($combos);
-        
-        $a = json_decode($_POST["words"]);
-        $a[1] = "zzz";
-        echo(json_encode($a));
+        }
+
+        echo json_encode($words);
     }
 
 ?>
