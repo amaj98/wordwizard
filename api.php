@@ -34,4 +34,6 @@
         //echo json_encode($combos);
     }
 
+    echo("booooooo")
+
 ?>
