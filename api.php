@@ -4,8 +4,8 @@
 
     if (!$dbhandle) die ($error);
 
-    //header('HTTP/1.1 200 OK');
-    //header('Content-Type: application/json');
+    header('HTTP/1.1 200 OK');
+    header('Content-Type: application/json');
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
