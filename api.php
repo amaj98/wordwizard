@@ -15,8 +15,8 @@
         $statement->execute();
     
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-            echo json_encode($results);
-        }
+        echo json_encode($results);
+    }
 
     elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $test = json_decode($_POST);
