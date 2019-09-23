@@ -9,7 +9,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
-        $query = "SELECT rack FROM racks WHERE length=7 and weight <= 10 order by random() limit 1";
+        $query = "SELECT rack FROM racks WHERE length=5 and weight <= 10 order by random() limit 1";
         $statement = $dbhandle->prepare($query);
         $statement->execute();
     
