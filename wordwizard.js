@@ -47,7 +47,7 @@ var combinations = (letters)=>{
       }
     }
     f('', letters);
-    return combos;
+    return [...new Set(combos)];
 }
 
 var inputHandler = (evt)=>{
