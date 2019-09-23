@@ -41,6 +41,13 @@ body{
     height:100%;
     border: 2px dotted azure;
 }
+#letters{
+    color: royalblue;
+    font-size: 44;
+    font-weight: bolder;
+    height:50%;
+    width:100%;
+}
 
 .play{
     background-color: darkslateblue;
