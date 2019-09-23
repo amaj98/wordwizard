@@ -32,7 +32,8 @@
         }*/
         //echo json_encode($combos);
         
-        echo($_POST["arr"]);
+        $a = json_decode($_POST["words"]);
+        echo($a[1]);
     }
 
 ?>
