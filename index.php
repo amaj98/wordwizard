@@ -1,6 +1,4 @@
 <?php 
-include_once("index.html");
-
 $dbhandle = new PDO("sqlite:scrabble.sqlite") or die("Failed to open DB");
 if (!$dbhandle) die ($error);
 
@@ -10,5 +8,5 @@ $statement = $dbhandle->prepare($query);
 
 $statement->execute();
 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-
+echo $_POST;
 ?>
