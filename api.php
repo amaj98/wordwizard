@@ -19,8 +19,16 @@
     }
 
     elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $test = json_decode($_POST);
-        echo json_encode($_POST);
+        $combos = json_decode($_POST);
+        $words = array();
+        foreach ($combos as $key => $value) {
+            $query = "SELECT words FROM rack WHERE rack ="+$value;
+            $statement = $dbhandle->prepare($query);
+            $statement->execute();
+            $raw = $statement->fetch(PDO::FETCH_ASSOC);
+            $words = array_merge($words,explode("@@",$raw));
+        }
+        echo json_encode($words);
     }
 
 ?>

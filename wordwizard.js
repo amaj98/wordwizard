@@ -25,10 +25,14 @@ var startGame = ()=>{
 }
 
 var processRack = (rack) => {
-    let letters = rack;
-    let combos = combinations(letters);
-    $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + [...letters].join(' ') + "</div>");
+    let combos = combinations(rack);
+    $.post("api.php",JSON.stringify(combos),(words)=>processWords(words));
+    $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + [...rack].join(' ') + "</div>");
     $(document).keydown(inputHandler);
+}
+
+var processWords = (words) =>{
+    console.log(words);
 }
 
 var combinations = (letters)=>{
