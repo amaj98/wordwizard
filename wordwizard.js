@@ -1,9 +1,12 @@
 var ready = () =>{
+    /*
     $('body').empty();
     $('body').text('abc');
     $('body').on('click',()=>{$.post("api.php",{"words":"abc,123,456"},(data)=>$('body').text(JSON.stringify(data)))});
     $('body').on('keydown',()=>{$.get("api.php",(data)=>$('body').text(JSON.stringify(data)))});
-    /*
+    
+    */
+   
     $('#game').text("Press Enter to start")
 
     $(document).keydown((evt)=>{
@@ -11,11 +14,13 @@ var ready = () =>{
             $('#game').text("");
             $(document).off('keydown')
             startGame();}
-        });*/
+        });
 }
 var startGame = ()=>{
-    $('#game').append("<div id = 'guesses'></div>")
-    $('#game').append("<div id = 'letterbank'>LETTERS</div>")
+    $('#game').append("<div id = 'guesses'></div>");
+    $('#game').append("<div id = 'letterbank'>LETTERS</div>");
+    let letters = $.get("api.php",(data)=>$('body').text(JSON.stringify(data)));
+    $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + letters + "</div>");
     $(document).keydown(inputHandler);
 }
 

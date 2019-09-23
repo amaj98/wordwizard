@@ -42,11 +42,6 @@ body{
     border: 2px dotted azure;
 }
 
-#lbheader{
-    display:none;
-
-}
-
 .play{
     background-color: darkslateblue;
     color: turquoise;
