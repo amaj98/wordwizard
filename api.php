@@ -21,15 +21,15 @@
         $combos = json_decode($_POST["words"]);
         
         $words = array();
-        /*
+        
         foreach ($combos as $value) {
-            $query = "SELECT words FROM racks WHERE rack = '$value'"
+            $query = "SELECT words FROM racks WHERE rack = '$value'";
             $statement = $dbhandle->prepare($query);
             $statement->execute();
             $raw = $statement->fetch(PDO::FETCH_ASSOC);
             $words = array_merge($words,explode("@@",$raw));
         }
-        */
+        
         echo json_encode($combos);
     }
 
