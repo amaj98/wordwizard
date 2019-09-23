@@ -32,7 +32,7 @@
         }*/
         //echo json_encode($combos);
         
-        echo($_POST);
+        echo($_POST[0]);
     }
 
 ?>
