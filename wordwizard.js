@@ -34,7 +34,8 @@ var processRack = (rack) => {
 
 var processWords = (words) =>{
     console.log('processing words');
-    console.log(words);
+    words = words.filter(word => word.length>3);
+    console.log('words');
     $(document).keydown(inputHandler);
 }
 
