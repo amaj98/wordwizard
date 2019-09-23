@@ -34,8 +34,8 @@ var combinations = (letters)=>{
     let combos = [];
     let f = (prefix, letters)=> {
       for (var i = 0; i < letters.length; i++) {
-        result.push(prefix + letters[i]);
-        f(prefix + letterss[i], letters.slice(i + 1));
+        combos.push(prefix + letters[i]);
+        f(prefix + letters[i], letters.slice(i + 1));
       }
     }
     f('', letters);
