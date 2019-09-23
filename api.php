@@ -19,9 +19,10 @@
     }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $combos = json_decode($_POST);
+        //$combos = json_decode($_POST);
         
-        $words = array();/*
+        //$words = array();
+        /*
         foreach ($combos as $key => $value) {
             $query = "SELECT words FROM racks WHERE rack = '$value'"
             $statement = $dbhandle->prepare($query);
