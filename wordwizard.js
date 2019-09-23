@@ -1,18 +1,5 @@
 var ready = () =>{
     
-    $(document).on("click", function(){
-
-        $.ajax({
-
-            method: "GET",
-
-            url: "api.php",
-
-            success: data=>{$(document).text(data)}
-
-        });
-
-      });
     $('#game').text("Press Enter to start")
 
     $(document).keydown((evt)=>{
