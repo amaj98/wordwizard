@@ -29,7 +29,7 @@
             $raw = $statement->fetch(PDO::FETCH_ASSOC);
             $words = array_merge($words,explode("@@",$raw));
         }*/
-        echo json_encode($words);
+        echo json_encode($combos);
     }
 
 ?>
