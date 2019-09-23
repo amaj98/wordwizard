@@ -29,11 +29,13 @@ var processRack = (rack) => {
     console.log(JSON.stringify(combos));
     $.post("api.php",JSON.stringify(combos),(data)=>processWords(data));
     $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + [...rack].join(' ') + "</div>");
-    $(document).keydown(inputHandler);
+    
 }
 
 var processWords = (words) =>{
-    console.log("jswords",words);
+    console.log('processing words');
+    console.log(words);
+    $(document).keydown(inputHandler);
 }
 
 var combinations = (letters)=>{
