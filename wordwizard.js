@@ -2,8 +2,8 @@ var ready = () =>{
     $('body').empty();
     $('body').text('abc');
     $('body').on('click',()=>{
-        $.ajax({method: "GET",url:"api.php",success: (data)=>$('body').text(JSON.stringify(data))})
-    });
+        $.post("api.php","words",(data)=>$('body').text(data))});
+    }
     /*
     $('#game').text("Press Enter to start")
 
