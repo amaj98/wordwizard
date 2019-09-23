@@ -23,7 +23,7 @@ var startGame = ()=>{
     $('#game').append("<div id = 'letterbank'>LETTERS</div>");
     $.get("api.php",(data)=>letters = data["rack"]);
     console.log(letters);
-    $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + [...letters].join(' ') + "</div>");
+    $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + letters + "</div>");
     $(document).keydown(inputHandler);
 }
 
