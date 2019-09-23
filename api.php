@@ -34,7 +34,7 @@
         
         $a =  json_decode($_POST);
         $a[0] = 5;
-        echo(json_encode($_POST));
+        echo(json_encode($a));
     }
 
 ?>
