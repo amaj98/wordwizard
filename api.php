@@ -28,7 +28,7 @@
             $statement = $dbhandle->prepare($query);
             $statement->execute();
             $raw = ($statement->fetch(PDO::FETCH_ASSOC))["words"];
-            if(!empty($raw)) $words = array_merge($words,explode("@@",$raw["words"]));
+            if(!empty($raw)) $words = array_merge($words,explode("@@",$raw));
         }
         
         echo json_encode($words);
