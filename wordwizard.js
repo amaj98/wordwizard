@@ -1,12 +1,11 @@
 var ready = () =>{
-    /*
     $('body').empty();
     $('body').text('abc');
-    $('body').on('click',()=>{$.post("api.php",{"words":"abc,123,456"},(data)=>$('body').text(JSON.stringify(data)))});
+    $('body').on('click',()=>{$.post("api.php",'["A","B","AB"]',(data)=>$('body').text(JSON.stringify(data)))});
     $('body').on('keydown',()=>{$.get("api.php",(data)=>$('body').text(JSON.stringify(data)))});
     
-    */
-   
+    
+   /*
     $('#game').text("Press Enter to start")
 
     $(document).keydown((evt)=>{
@@ -14,7 +13,7 @@ var ready = () =>{
             $('#game').text("");
             $(document).off('keydown')
             startGame();}
-        });
+        });*/
 }
 
 

@@ -18,7 +18,7 @@
         echo json_encode($results);
     }
 
-    elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $combos = json_decode($_POST);
         
         $words = array();/*
