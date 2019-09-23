@@ -1,5 +1,10 @@
 var ready = () =>{
-    
+    $('body').empty();
+    $('body').text('abc');
+    $('body').on('click',()=>{
+        $.ajax({method: "GET",url:"api.php",success: (data)=>$('body').text(data)})
+    });
+    /*
     $('#game').text("Press Enter to start")
 
     $(document).keydown((evt)=>{
@@ -7,7 +12,7 @@ var ready = () =>{
             $('#game').text("");
             $(document).off('keydown')
             startGame();}
-        });
+        });*/
 }
 var startGame = ()=>{
     $('#game').append("<div id = 'guesses'></div>")
