@@ -13,13 +13,14 @@ var ready = () =>{
         if(evt.key == 'Enter'){
             $('#game').text("");
             $(document).off('keydown')
+            $('#play').text("");
             startGame();}
         });
 }
 
 
 var startGame = ()=>{
-    $('#game').append("<div id = 'guesses'></div>");
+    $('#game').append("<div id = 'words'></div>");
     $('#game').append("<div id = 'letterbank'>letter bank</div>");;    
     $.get("api.php",(data)=> processRack(data['rack']));
 }
@@ -31,11 +32,12 @@ var processRack = (rack) => {
     $('#letterbank').append("<div class = 'letters text-center' id = 'letters'>" + [...rack].join(' ') + "</div>");
     
 }
-
+var wordMap = {}
 var processWords = (words) =>{
-    console.log('processing words');
     words = words.filter(word => word.length>=3);
-    console.log(words);
+    for(word of words){
+        wordMap[word] = $("<div class = 'word'>" + [...word].map(l=>'_').join(' ') + "</div>").appendTo($('#words'));
+    }
     $(document).keydown(inputHandler);
 }
 
@@ -53,7 +55,9 @@ var combinations = (letters)=>{
 
 var inputHandler = (evt)=>{
     if(evt.keyCode== 13){
-        //submit for input
+        let w = $('#play').text();
+        if(w in wordMap) wordMap[w].text(w);
+
         $('#play').text("");
     }
     else if (evt.keyCode >= 65 && evt.keyCode<=90){
