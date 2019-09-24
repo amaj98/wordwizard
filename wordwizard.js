@@ -1,11 +1,4 @@
 var ready = () =>{
-    /*
-    $('body').empty();
-    $('body').text('start');
-    $('body').on('click',()=>{$.post("api.php",{"words":JSON.stringify(["w1","w2",'w3'])},(data)=>{$('body').text(data[1]);console.log(data)})});
-    $('body').on('keydown',()=>{$.get("api.php",(data)=>$('body').text(JSON.stringify(data)))});
-    */
-    
    
     $('#game').text("Press Enter to start")
 
@@ -33,6 +26,7 @@ var processRack = (rack) => {
     
 }
 var wordMap = {}
+
 var processWords = (words) =>{
     words = words.filter(word => word.length>=3);
     for(word of words){

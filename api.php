@@ -1,7 +1,6 @@
 <?php
 
     $dbhandle = new PDO("sqlite:scrabble.sqlite") or die("Failed to open DB");
-
     if (!$dbhandle) die ($error);
 
     header('HTTP/1.1 200 OK');
